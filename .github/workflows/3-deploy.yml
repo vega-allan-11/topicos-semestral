@@ -32,7 +32,8 @@ jobs:
             --registry-login-server $SERVER \
             --registry-username ${{ secrets.ACR_USER }} \
             --registry-password ${{ secrets.ACR_PASS }} \
-            --subnet $SUBNET_ID \
+            --ip-address Public \
+            --dns-name-label inventario-final-2026 \
             --ports 80 \
             --environment-variables APP_ENV=prod DB_PATH=/app/inventory.db \
             --os-type Linux --cpu 1 --memory 1
